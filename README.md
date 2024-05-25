@@ -16,10 +16,37 @@ In this sense its important to emphasize some aspects from the application:
 
 The main scope of the application is represented in the Figure below:
 ![Alt Text](https://github.com/GustavoMourao/pcdt-rag/blob/main/images/1_i3UYywX0p6KMB4CldUWO-A.webp)
+[6]
 
 
 ## Instalation and inference procediment
+1. Create a local env: `pip install -r requirements.txt`
 
+2. Install Ollama: `curl -fsSL https://ollama.com/install.sh | sh`
+
+3. execute app.py: `python app.py` considering those arguments as input:
+
+```
+Run local LLM with RAG with Ollama.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m MODEL, --model MODEL
+                        LLM model to use.[default=mistral]
+  -e EMBEDDING_MODEL, --embedding_model EMBEDDING_MODEL
+                        Embedding model to use.[default=nomic-embed-text]
+  -p PATH, --path PATH  Directory containing documents to load.
+```
+
+Obs.: in case of error installation in sqlite (Chroma dependence), proceed:
+
+1. pip install pysqlite3-binary
+2. add into `chroma.py` this: 
+```
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+```
 
 
 ## References:
@@ -33,4 +60,6 @@ The main scope of the application is represented in the Figure below:
 [4] https://aclanthology.org/2023.eacl-main.148.pdf
 
 [5] https://github.com/amscotti/local-LLM-with-RAG
+
+[6] https://pub.aimind.so/llm-embeddings-explained-simply-f7536d3d0e4b
 ```
