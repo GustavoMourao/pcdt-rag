@@ -50,7 +50,8 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 ## Results
 ![Alt Text](https://github.com/GustavoMourao/pcdt-rag/blob/main/images/img01.png)
-
+![Alt Text](https://github.com/GustavoMourao/pcdt-rag/blob/main/images/img02.png)
+![Alt Text](https://github.com/GustavoMourao/pcdt-rag/blob/main/images/img02.png)
 
 ## References:
 ```
