@@ -48,6 +48,9 @@ import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 ```
 
+## Results
+![Alt Text](https://github.com/GustavoMourao/pcdt-rag/blob/main/images/img01.png)
+
 
 ## References:
 ```
